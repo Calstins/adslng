@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-p {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1;
+}
+.word {
+  margin-right: 12px;
+  margin-top: 12px;
+}
