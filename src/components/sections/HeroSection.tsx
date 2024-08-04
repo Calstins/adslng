@@ -10,16 +10,16 @@ function HeroSection() {
         </p>
         <div className="block md:hidden my-[35px]">
           <img
-            src="/images/microphone_illustration.png"
-            alt="microphone illustration"
+            src="/images/home_illustration.svg"
+            alt="hero illustration"
+            className="float"
           />
         </div>
 
         <p className="text-p text-black my-[35px]">
-          At our company, we specialize in providing top-tier information
-          systems design, consulting, advisory services, and system integration.
-          Our expert team ensures your business leverages the best technology
-          solutions tailored to your unique needs.
+          We provide expert information systems design, consulting, advisory
+          services, and system integration to ensure your business uses the best
+          technology solutions tailored to your needs.
         </p>
 
         <MainButton
@@ -29,8 +29,9 @@ function HeroSection() {
       </div>
       <div className="hidden md:block">
         <img
-          src="/images/microphone_illustration.png"
-          alt="microphone illustration"
+          src="/images/home_illustration.svg"
+          alt="hero illustration"
+          className="float"
         />
       </div>
     </section>

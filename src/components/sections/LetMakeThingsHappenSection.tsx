@@ -21,7 +21,7 @@ function LetMakeThingsHappenSection() {
       </div>
       <div className="absolute -top-8 right-8 hidden md:block">
         <img
-          src="/images/proposal_illustration.png"
+          src="/images/proposal_illustration.svg"
           alt="proposal illustration"
         />
       </div>

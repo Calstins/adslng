@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { IoArrowUpSharp } from 'react-icons/io5';
 
 interface IProps {
   titleTop: string;
@@ -28,7 +29,7 @@ function ServiceCard({
       )}
     >
       <div className="flex justify-between gap-2">
-        <div className="block">
+        <div className="block w-[70%]">
           <div
             className={cn(
               ' bg-primary text-xl md:text-2xl rounded-[7px] px-1',
@@ -46,17 +47,21 @@ function ServiceCard({
             {titleBottom}{' '}
           </div>
         </div>
-        <div>
+        <div className="w-[30%]">
           <img src={image} alt="card icon" />
         </div>
       </div>
       <Link href={link}>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center group">
           <div>
             {darkArrow ? (
-              <img src="/images/arrow_dark.png" alt="dark arrow icon" />
+              <div className="bg-white rounded-full p-3">
+                <IoArrowUpSharp className="text-primary text-2xl transform rotate-[30deg] group-hover:rotate-[90deg] transition-transform duration-300" />
+              </div>
             ) : (
-              <img src="/images/arrow_light.png" alt="light arrow icon" />
+              <div className="bg-white rounded-full p-3">
+                <IoArrowUpSharp className="text-secondary text-2xl transform rotate-[30deg] group-hover:rotate-[90deg] transition-transform duration-300" />
+              </div>
             )}
           </div>
           <p className={cn('text-p', darkArrow ? 'text-black' : 'text-white')}>
