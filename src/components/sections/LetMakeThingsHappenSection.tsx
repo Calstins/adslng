@@ -19,10 +19,11 @@ function LetMakeThingsHappenSection() {
           classes="bg-secondary text-white text-[18px] w-full md:w-[231px] hover:text-black"
         />
       </div>
-      <div className="absolute -top-8 right-8 hidden md:block">
+      <div className="absolute -top-6 right-6 hidden md:block w-[30vw]">
         <img
           src="/images/proposal_illustration.svg"
           alt="proposal illustration"
+          className="float"
         />
       </div>
     </section>

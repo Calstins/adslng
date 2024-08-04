@@ -31,7 +31,7 @@ function HeroSection() {
         <img
           src="/images/home_illustration.svg"
           alt="hero illustration"
-          className="float"
+          className="float -mt-8"
         />
       </div>
     </section>
