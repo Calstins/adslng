@@ -7,13 +7,16 @@ import MainButton from '../common/MainButton';
 
 function ContactUsSection() {
   return (
-    <section className="bg-accent flex justify-between w-full rounded-[45px] relative overflow-x-hidden">
+    <section
+      className="bg-accent flex justify-between w-full rounded-[45px] relative overflow-x-hidden"
+      id="quote"
+    >
       <div className="py-[60px] px-8 md:px-[100px] xl:pr-[500px]">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] items-center ">
-          <div className="px-2 bg-primary inline-block font-medium text-h2 rounded-md">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-[40px]  2xl:gap-[120px] items-center ">
+          <div className="px-2 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
             Contact Us
           </div>
-          <p className="text-p">
+          <p className="text-p 2xl:text-2xl">
             Connect with Us: Let's Discuss Your Technology and Business Needs
           </p>
         </div>
@@ -27,7 +30,7 @@ function ContactUsSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="get_a_quote" id="r2" />
-                <Label htmlFor="r2">Get a Qoute</Label>
+                <Label htmlFor="r2">Get a Quote</Label>
               </div>
             </RadioGroup>
           </div>

@@ -4,16 +4,16 @@ import { useState } from 'react';
 import { X } from 'lucide-react';
 import MainButton from './MainButton';
 
-function NavBar() {
+interface LinkProps {
+  href?: string;
+}
+
+const NavBar: React.FC<LinkProps> = ({ href }) => {
   const [menu, setMenu] = useState(false);
   const links = [
     {
-      name: 'About us',
-      link: '/',
-    },
-    {
       name: 'Services',
-      link: '/',
+      link: 'service',
     },
   ];
 
@@ -22,9 +22,9 @@ function NavBar() {
   };
 
   return (
-    <div className="md:sticky md:top-0   md:shadow-none z-20 ">
+    <div className="md:sticky md:top-0 md:shadow-none z-20 2xl:mx-[200px]">
       {/* DESKTOP */}
-      <div className=" hidden lg:block animate-in fade-in zoom-in bg-white p-4">
+      <div className="hidden lg:block animate-in fade-in zoom-in bg-white p-4">
         <div className="flex justify-between mx-4 md:mx-[85px] items-center">
           <div>
             {/* <img src="/images/logo.png" alt="logo" /> */}
@@ -32,14 +32,14 @@ function NavBar() {
           </div>
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
             {links.map((link, index) => (
-              <p
+              <a
                 key={index}
-                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+                className="hover:text-primary cursor-pointer flex items-center gap-2 font-[500] text-gray"
+                href={link.link}
               >
                 {link.name}
-              </p>
+              </a>
             ))}
-
             <div className="flex items-center gap-[40px] select-none">
               <MainButton
                 text="Request a quote"
@@ -56,13 +56,14 @@ function NavBar() {
       </div>
       {/* MOBILE */}
       <div
-        className={` block lg:hidden shadow-sm  fixed top-0 w-full z-[999] bg-white py-4 animate-in fade-in zoom-in  ${
-          menu ? ' bg-primary py-2' : ''
-        } `}
+        className={`block lg:hidden shadow-sm fixed top-0 w-full z-[999] bg-white py-4 animate-in fade-in zoom-in ${
+          menu ? 'bg-primary py-2' : ''
+        }`}
       >
         <div className="flex justify-between mx-[10px]">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
-            <img src="/images/logo.png" alt="logo" className="w-[7rem]" />
+            {/* <img src="/images/logo.png" alt="logo" className="w-[7rem]" /> */}
+            <p className="text-5xl font-extrabold">ADSL</p>
           </div>
           <div className="flex items-center gap-[40px]">
             {menu ? (
@@ -84,14 +85,14 @@ function NavBar() {
           <div className="my-8 select-none animate-in slide-in-from-right">
             <div className="flex flex-col gap-8 mt-8 mx-4">
               {links.map((link, index) => (
-                <p
+                <a
                   key={index}
-                  className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+                  className="hover:text-primary cursor-pointer flex items-center gap-2 font-[500] text-gray"
+                  href={link.link}
                 >
                   {link.name}
-                </p>
+                </a>
               ))}
-
               <div className="flex items-center gap-[40px] select-none">
                 <MainButton text="Request a quote" />
               </div>
@@ -103,6 +104,6 @@ function NavBar() {
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;

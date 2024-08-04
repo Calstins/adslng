@@ -32,19 +32,19 @@ function ServiceCard({
         <div className="block w-[70%]">
           <div
             className={cn(
-              ' bg-primary text-xl md:text-2xl rounded-[7px] px-1',
+              ' bg-primary text-xl md:text-2xl rounded-[7px] p-2',
               titleBg
             )}
           >
-            {titleTop}{' '}
+            {titleTop}
           </div>
           <div
             className={cn(
-              ' bg-primary text-xs md:text-sm rounded-[7px] inline-block px-1',
+              ' bg-primary text-xs md:text-sm rounded-[7px] inline-block px-3 p-2 2xl:text-xl',
               titleBg
             )}
           >
-            {titleBottom}{' '}
+            {titleBottom}
           </div>
         </div>
         <div className="w-[30%]">
