@@ -13,7 +13,7 @@ function ContactUsSection() {
     >
       <div className="py-[60px] px-8 md:px-[100px] xl:pr-[500px]">
         <div className="flex flex-col md:flex-row gap-8 md:gap-[40px]  2xl:gap-[120px] items-center ">
-          <div className="px-2 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
+          <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
             Contact Us
           </div>
           <p className="text-p 2xl:text-2xl">
@@ -36,7 +36,7 @@ function ContactUsSection() {
           </div>
 
           <div className="mt-[25px]">
-            <p className="pb-[5px]">Name</p>
+            <p className="pb-[5px]">Name*</p>
             <Input type="text" placeholder="Name" />
           </div>
 

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import MainButton from '../common/MainButton';
 
@@ -17,6 +18,12 @@ function LetMakeThingsHappenSection() {
         <MainButton
           text="Get your free proposal"
           classes="bg-secondary text-white text-[18px] w-full md:w-[231px] hover:text-black"
+          action={() => {
+            const quoteSection = document.getElementById('quote');
+            if (quoteSection) {
+              quoteSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
         />
       </div>
       <div className="absolute -top-6 right-6 2xl:right-14 hidden md:block w-[30vw] 2xl:w-[20vw]">

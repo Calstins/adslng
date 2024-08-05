@@ -13,7 +13,7 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
   const links = [
     {
       name: 'Services',
-      link: 'service',
+      link: '#services',
     },
   ];
 

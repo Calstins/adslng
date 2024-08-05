@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import MainButton from '../common/MainButton';
 
@@ -25,6 +26,12 @@ function HeroSection() {
         <MainButton
           text="Book a consultation"
           classes="bg-secondary text-white text-[18px] w-full md:w-[231px] hover:text-black"
+          action={() => {
+            const quoteSection = document.getElementById('quote');
+            if (quoteSection) {
+              quoteSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
         />
       </div>
       <div className="hidden md:block">
