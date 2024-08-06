@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import CursorManager from '../context/CursorManager';
 
 export const metadata: Metadata = {
   title: 'Augusta Digital Services Limited',
@@ -12,14 +13,14 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.className}>{children}</body>
+      <body className={spaceGrotesk.className}>
+        <CursorManager>{children}</CursorManager>
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

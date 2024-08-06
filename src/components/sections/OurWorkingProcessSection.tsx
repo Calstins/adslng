@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import WorkingProcessCard from '../cards/WorkingProcessCard';
 import { Accordion } from '../ui/accordion';
+import Paragraph from '../common/Paragraph';
 
 function OurWorkingProcessSection() {
   const processes = [
@@ -44,6 +45,8 @@ function OurWorkingProcessSection() {
     },
   ];
 
+  const content = 'Step-by-Step Guide to Achieving Your Business Goals';
+
   const [value, setValue] = useState('');
 
   const handleAccordionChange = (value: string) => {
@@ -55,9 +58,7 @@ function OurWorkingProcessSection() {
         <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
           Our Working Process
         </div>
-        <p className="text-p 2xl:text-2xl">
-          Step-by-Step Guide to Achieving Your Business Goals
-        </p>
+        <Paragraph className="text-p 2xl:text-2xl 2xl:mt-5" value={content} />
       </div>
 
       <div className="mt-[80px]">

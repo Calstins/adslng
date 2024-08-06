@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       colors: {
-        primary: '#E5E0FC',
+        primary: '#AAAAEE',
         secondary: '#1D1A2E',
         accent: '#F3F3F3',
       },
