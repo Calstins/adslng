@@ -3,6 +3,7 @@ import { FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { Separator } from '../ui/separator';
 import { Input } from '../ui/input';
 import MainButton from '../common/MainButton';
+import Link from 'next/link';
 
 function FooterSection() {
   const currentYear = new Date().getFullYear();
@@ -68,11 +69,12 @@ function FooterSection() {
       </div>
       <div className="flex flex-col md:flex-row gap-1 md:gap-[40px]">
         <p className="text-white text-p">
-          © {currentYear} ADSL. All Rights Reserved.
+          © {currentYear} ADSL<span className="text-primary mr-1">.</span> All
+          Rights Reserved.
         </p>
-        <a href="/" className="text-white underline text-p block">
+        <Link href="/privacy" className="text-white underline text-p block">
           Privacy Policy
-        </a>
+        </Link>
       </div>
     </section>
   );

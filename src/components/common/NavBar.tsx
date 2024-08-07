@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import MainButton from './MainButton';
+import Link from 'next/link';
 
 interface LinkProps {
   href?: string;
@@ -12,8 +13,16 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
   const [menu, setMenu] = useState(false);
   const links = [
     {
+      name: 'About Us',
+      link: '/about',
+    },
+    {
       name: 'Services',
-      link: '#services',
+      link: '/services',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
     },
   ];
 
@@ -28,7 +37,11 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
         <div className="flex justify-between mx-4 md:mx-[85px] items-center">
           <div>
             {/* <img src="/images/logo.png" alt="logo" /> */}
-            <p className="text-5xl font-extrabold">ADSL</p>
+            <Link href="/">
+              <p className="text-5xl font-extrabold">
+                ADSL<span className="text-primary">.</span>
+              </p>
+            </Link>
           </div>
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
             {links.map((link, index) => (
@@ -63,7 +76,11 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
         <div className="flex justify-between mx-[10px]">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
             {/* <img src="/images/logo.png" alt="logo" className="w-[7rem]" /> */}
-            <p className="text-5xl font-extrabold">ADSL</p>
+            <Link href="/">
+              <p className="text-5xl font-extrabold">
+                ADSL<span className="text-primary">.</span>
+              </p>
+            </Link>
           </div>
           <div className="flex items-center gap-[40px]">
             {menu ? (
