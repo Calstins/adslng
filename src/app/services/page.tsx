@@ -1,9 +1,9 @@
+import React from 'react';
 import PageTitle from '@/components/common/PageTitle';
 import ContactUsSection from '@/components/sections/ContactUsSection';
 import LetMakeThingsHappenSection from '@/components/sections/LetMakeThingsHappenSection';
 import OurWorkingProcessSection from '@/components/sections/OurWorkingProcessSection';
 import ServiceSection from '@/components/sections/ServiceSection';
-import React from 'react';
 
 const Services = () => {
   return (
@@ -16,9 +16,7 @@ const Services = () => {
         />
         <ServiceSection />
         <LetMakeThingsHappenSection />
-        {/* <CaseStudySection /> */}
         <OurWorkingProcessSection />
-        {/* <TeamSection /> */}
         <ContactUsSection />
       </div>
     </section>

@@ -3,23 +3,26 @@ import Link from 'next/link';
 import { IoArrowUpSharp } from 'react-icons/io5';
 
 interface IProps {
+  id: number;
   titleTop: string;
   titleBottom: string;
   bg: string;
+  details: string;
+  image2: string;
+  image3: string;
   titleBg: string;
   image: string;
   darkArrow?: boolean;
-  link?: string;
 }
 
 function ServiceCard({
+  id,
   titleTop,
   titleBottom,
   bg,
   titleBg,
   image,
   darkArrow = true,
-  link = '/',
 }: IProps) {
   return (
     <div
@@ -51,8 +54,11 @@ function ServiceCard({
           <img src={image} alt="card icon" />
         </div>
       </div>
-      <Link href={link}>
-        <div className="flex gap-2 items-center group">
+      <div>
+        <Link
+          className="flex gap-2 items-center group"
+          href={`/services/${id}`}
+        >
           <div>
             {darkArrow ? (
               <div className="bg-white rounded-full p-3">
@@ -67,8 +73,8 @@ function ServiceCard({
           <p className={cn('text-p', darkArrow ? 'text-black' : 'text-white')}>
             Learn more...
           </p>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

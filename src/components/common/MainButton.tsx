@@ -18,6 +18,7 @@ type MainButtonProps = {
   rightIconClass?: string;
   iconComponent?: ReactElement;
   size?: 'small' | 'normal' | 'large';
+  type?: 'button' | 'submit' | 'reset';
 };
 
 const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
@@ -28,7 +29,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
       form,
       action,
       disabled = false,
-      isSubmitable,
+      isSubmitable = false,
       width,
       dataLoadingText = 'Please wait ...',
       variant = 'primary',
@@ -102,7 +103,6 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
   }
 );
 
-// Assigned display name
 MainButton.displayName = 'MainButton';
 
 export default MainButton;
