@@ -61,104 +61,111 @@ function ContactUsSection() {
   };
 
   return (
-    <section
-      className="bg-accent flex justify-between w-full rounded-[45px] relative overflow-x-hidden mb-10"
-      id="quote"
-    >
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="py-[60px] px-6 md:px-[50px] xl:pr-[500px]">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center">
-            <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
-              Contact Us
+    <>
+      <section
+        className="bg-accent flex justify-between w-full rounded-[45px] relative overflow-x-hidden mb-10 py-10"
+        id="quote"
+      >
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="py-[60px] px-6 md:px-[50px] xl:pr-[500px]">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center">
+              <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
+                Contact Us
+              </div>
+              <Paragraph
+                className="text-p 2xl:text-2xl 2xl:mt-5"
+                value={content}
+              />
             </div>
-            <Paragraph
-              className="text-p 2xl:text-2xl 2xl:mt-5"
-              value={content}
-            />
-          </div>
 
-          <div className="mt-[40px]">
-            <div>
-              <RadioGroup
-                defaultValue="say_hi"
-                className="flex"
-                onValueChange={(value) => setRadioValue(value)}
+            <div className="mt-[40px]">
+              <div>
+                <RadioGroup
+                  defaultValue="say_hi"
+                  className="flex"
+                  onValueChange={(value) => setRadioValue(value)}
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="say_hi" id="r1" />
+                    <Label htmlFor="r1">Say Hi</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="get_a_quote" id="r2" />
+                    <Label htmlFor="r2">Get a Quote</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <div className="mt-[25px]">
+                <p className="pb-[5px]">Name*</p>
+                <Input
+                  type="text"
+                  name="from_name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+
+              <div className="mt-[25px]">
+                <p className="pb-[5px]">Email*</p>
+                <Input
+                  type="email"
+                  name="from_email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div className="mt-[25px]">
+                <p className="pb-[5px]">Phone*</p>
+                <Input
+                  type="tel"
+                  name="from_phone"
+                  placeholder="Phone"
+                  required
+                />
+              </div>
+
+              <div className="mt-[25px]">
+                <p className="pb-[5px]">Message*</p>
+                <Textarea name="message" placeholder="Message" required />
+              </div>
+
+              <div className="mt-[25px]">
+                <input type="hidden" name="radio_value" value={radioValue} />
+              </div>
+            </div>
+
+            <div className="mt-[40px]">
+              <MainButton
+                text={isLoading ? 'Sending...' : 'Send Message'}
+                classes="bg-secondary text-white text-[18px] w-full md:w-full hover:text-black"
+                type="submit"
+                isSubmitable={!isLoading}
+                isLoading={isLoading}
+              />
+            </div>
+            {message && (
+              <div
+                className={`mt-[20px] flex gap-2 text-xl ${
+                  messageType === 'success' ? 'text-green-500' : 'text-red-500'
+                }`}
               >
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="say_hi" id="r1" />
-                  <Label htmlFor="r1">Say Hi</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="get_a_quote" id="r2" />
-                  <Label htmlFor="r2">Get a Quote</Label>
-                </div>
-              </RadioGroup>
-            </div>
-
-            <div className="mt-[25px]">
-              <p className="pb-[5px]">Name*</p>
-              <Input type="text" name="from_name" placeholder="Name" required />
-            </div>
-
-            <div className="mt-[25px]">
-              <p className="pb-[5px]">Email*</p>
-              <Input
-                type="email"
-                name="from_email"
-                placeholder="Email"
-                required
-              />
-            </div>
-
-            <div className="mt-[25px]">
-              <p className="pb-[5px]">Phone*</p>
-              <Input
-                type="tel"
-                name="from_phone"
-                placeholder="Phone"
-                required
-              />
-            </div>
-
-            <div className="mt-[25px]">
-              <p className="pb-[5px]">Message*</p>
-              <Textarea name="message" placeholder="Message" required />
-            </div>
-
-            <div className="mt-[25px]">
-              <input type="hidden" name="radio_value" value={radioValue} />
-            </div>
+                {messageType === 'success' ? (
+                  <GrStatusGood />
+                ) : (
+                  <GrStatusWarning />
+                )}
+                {message}
+              </div>
+            )}
           </div>
-
-          <div className="mt-[40px]">
-            <MainButton
-              text={isLoading ? 'Sending...' : 'Send Message'}
-              classes="bg-secondary text-white text-[18px] w-full md:w-full hover:text-black"
-              type="submit"
-              isSubmitable={!isLoading}
-              isLoading={isLoading}
-            />
+          <div className="hidden xl:block absolute top-0 right-[-20rem]">
+            <img src="/images/contact_illustration.png" alt="illustration" />
           </div>
-          {message && (
-            <div
-              className={`mt-[20px] flex gap-2 text-xl ${
-                messageType === 'success' ? 'text-green-500' : 'text-red-500'
-              }`}
-            >
-              {messageType === 'success' ? (
-                <GrStatusGood />
-              ) : (
-                <GrStatusWarning />
-              )}
-              {message}
-            </div>
-          )}
-        </div>
-        <div className="hidden xl:block absolute top-0 right-[-20rem]">
-          <img src="/images/contact_illustration.png" alt="illustration" />
-        </div>
-      </form>
-    </section>
+        </form>
+      </section>
+    </>
   );
 }
 
