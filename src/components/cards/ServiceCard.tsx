@@ -35,7 +35,7 @@ function ServiceCard({
         <div className="block w-[70%]">
           <div
             className={cn(
-              ' bg-primary text-xl md:text-2xl rounded-[7px] p-2',
+              ' bg-primary text-xl lg:text-2xl  rounded-[7px] p-2',
               titleBg
             )}
           >

@@ -77,7 +77,7 @@ function FooterSection() {
   };
 
   return (
-    <section className="bg-secondary rounded-t-[45px] p-8 md:p-[60px] 2xl:mx-[300px] md:mx-[100px]">
+    <section className="bg-secondary rounded-t-[45px] p-8 ">
       <div className="flex flex-col gap-8 md:flex-row justify-between">
         <div>
           <p className="text-5xl font-extrabold text-white">ADSL</p>

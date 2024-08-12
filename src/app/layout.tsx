@@ -18,11 +18,13 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
       <body className={spaceGrotesk.className}>
-        <ReCaptchaProvider>
-          <NavBar />
-          {children}
-          <FooterSection />
-        </ReCaptchaProvider>
+        <div className="mx-4 lg:mx-8 xl:mx-[100px] 2xl:mx-[250px]">
+          <ReCaptchaProvider>
+            <NavBar />
+            {children}
+            <FooterSection />
+          </ReCaptchaProvider>
+        </div>
       </body>
     </html>
   );

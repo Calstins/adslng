@@ -53,8 +53,8 @@ function OurWorkingProcessSection() {
     setValue(value);
   };
   return (
-    <section className="">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center ">
+    <section className="w-full">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center">
         <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
           Our Working Process
         </div>

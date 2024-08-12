@@ -8,7 +8,7 @@ import ServiceSection from '@/components/sections/ServiceSection';
 const Services = () => {
   return (
     <section>
-      <div className="mx-4 2xl:mx-[300px] md:mx-[100px] pt-[70px] flex flex-col gap-[100px]">
+      <div className="pt-[70px] flex flex-col gap-[100px]">
         <PageTitle
           line1="Empowering Your Business"
           line2="with Tailored Solutions"

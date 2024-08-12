@@ -12,8 +12,8 @@ interface PageTitleProps {
 
 const PageTitle: React.FC<PageTitleProps> = ({ line1, line2, content }) => {
   return (
-    <div className="flex flex-col justify-between w-full 2xl:justify-around items-center text-center gap-5 mt-6">
-      <p className="text-h1Mobile 2xl:text-4xl md:text-h2 text-black font-bold leading-tight">
+    <div className="flex flex-col justify-between 2xl:justify-around items-center text-center gap-5 pt-14 lg:pt-0 2xl:mx-[200px] xl:mx-[100px]">
+      <p className="text-3xl 2xl:text-4xl md:text-h2 text-black font-bold leading-tight">
         {line1} <br /> {line2}
       </p>
       <p className="text-p 2xl:text-2xl 2xl:mt-5 text-center leading-6">

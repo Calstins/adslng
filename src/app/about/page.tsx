@@ -2,10 +2,10 @@ import PageTitle from '@/components/common/PageTitle';
 import ContactUsSection from '@/components/sections/ContactUsSection';
 import OurWorkingProcessSection from '@/components/sections/OurWorkingProcessSection';
 
-export default function Home() {
+export default function About() {
   return (
     <section>
-      <div className="mx-4 2xl:mx-[300px] md:mx-[100px] pt-[70px] flex flex-col gap-[100px] my-7">
+      <div className="pt-[70px] flex flex-col gap-[100px] my-7">
         <PageTitle
           line1="We Guide Your Business Through"
           line2="the Digital Landscape to Achieve Success"

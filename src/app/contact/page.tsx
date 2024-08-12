@@ -5,7 +5,7 @@ import LetMakeThingsHappenSection from '@/components/sections/LetMakeThingsHappe
 export default function Home() {
   return (
     <section>
-      <div className="mx-4 2xl:mx-[300px] md:mx-[100px] pt-[70px] flex flex-col gap-[100px]">
+      <div className="pt-[70px] flex flex-col gap-[100px]">
         <PageTitle
           line1="Connect with Us to Elevate"
           line2="Your Business to New Heights"
