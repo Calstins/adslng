@@ -28,7 +28,7 @@ function LetMakeThingsHappenSection() {
       </div>
       <div className="absolute -top-6 md:-top-4 2xl:-top-3 right-6 2xl:right-14 hidden md:block w-[30vw] 2xl:w-[20vw] md:w-[50vw] lg:w-[40vw] xl:w-[25vw]">
         <img
-          src="/images/proposal_illustration.svg"
+          src="/images/proposal.svg"
           alt="proposal illustration"
           className="float"
         />

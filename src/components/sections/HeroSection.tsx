@@ -10,11 +10,7 @@ function HeroSection() {
           Welcome to Our <br /> Technology Solutions Hub
         </p>
         <div className="block md:hidden my-[35px]">
-          <img
-            src="/images/home_illustration.svg"
-            alt="hero illustration"
-            className="float"
-          />
+          <img src="/images/home.svg" alt="hero" className="float" />
         </div>
 
         <p className="text-p text-black my-[35px] 2xl:text-2xl text-center md:text-left">
@@ -36,11 +32,7 @@ function HeroSection() {
       </div>
       <div className="md:w-[50%] hidden md:block">
         <div className="flex justify-end items-center">
-          <img
-            src="/images/home_illustration.svg"
-            alt="hero illustration"
-            className="float lg:-mt-8"
-          />
+          <img src="/images/home.svg" alt="hero" className="float lg:-mt-8" />
         </div>
       </div>
     </section>

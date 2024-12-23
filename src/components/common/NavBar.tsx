@@ -36,11 +36,15 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
       <div className="hidden lg:block animate-in fade-in zoom-in bg-white py-4">
         <div className="flex justify-between items-center">
           <div>
-            {/* <img src="/images/logo.png" alt="logo" /> */}
             <Link href="/">
-              <p className="text-5xl font-extrabold">
+              <img
+                src="/images/logo-main.svg"
+                alt="logo"
+                className="lg:h-14 h-12"
+              />
+              {/* <p className="text-5xl font-extrabold">
                 ADSL<span className="text-primary">.</span>
-              </p>
+              </p> */}
             </Link>
           </div>
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
@@ -75,11 +79,11 @@ const NavBar: React.FC<LinkProps> = ({ href }) => {
       >
         <div className="flex justify-between mx-4">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
-            {/* <img src="/images/logo.png" alt="logo" className="w-[7rem]" /> */}
             <Link href="/">
-              <p className="text-5xl font-extrabold">
+              <img src="/images/logo-main.svg" alt="logo" className="h-7" />
+              {/* <p className="text-5xl font-extrabold">
                 ADSL<span className="text-primary">.</span>
-              </p>
+              </p> */}
             </Link>
           </div>
           <div className="flex items-center gap-[40px]">

@@ -79,9 +79,13 @@ function FooterSection() {
   return (
     <section className="bg-secondary rounded-t-[45px] p-8 ">
       <div className="flex flex-col gap-8 md:flex-row justify-between">
-        <div>
-          <p className="text-5xl font-extrabold text-white">ADSL</p>
-        </div>
+        <Link href="/">
+          <img
+            src="/images/logo-main.svg"
+            alt="logo"
+            className="lg:h-14 h-12"
+          />
+        </Link>
         <div className="flex flex-col md:flex-row gap-[40px]">
           {links.map((link, index) => (
             <Link
