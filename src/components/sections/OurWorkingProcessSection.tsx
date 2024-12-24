@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import WorkingProcessCard from '../cards/WorkingProcessCard';
 import { Accordion } from '../ui/accordion';
 import Paragraph from '../common/Paragraph';
+import Head from 'next/head';
+import Header from '../common/Header';
 
 function OurWorkingProcessSection() {
   const processes = [
@@ -55,9 +57,7 @@ function OurWorkingProcessSection() {
   return (
     <section className="w-full">
       <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center">
-        <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
-          Our Working Process
-        </div>
+        <Header title="Our Working Process" />
         <Paragraph className="text-p 2xl:text-2xl 2xl:mt-5" value={content} />
       </div>
 

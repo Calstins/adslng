@@ -1,6 +1,7 @@
 import React from 'react';
 import TeamCard from '../cards/TeamCard';
 import MainButton from '../common/MainButton';
+import Header from '../common/Header';
 
 function TeamSection() {
   const teams = [
@@ -29,9 +30,7 @@ function TeamSection() {
   return (
     <section>
       <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] items-center ">
-        <div className="px-2 bg-primary inline-block font-medium text-h2 rounded-md">
-          Team
-        </div>
+        <Header title="Team" />
         <p className="text-p">
           Meet the skilled and experienced team behind our successful technology
           solutions and innovative business strategies.

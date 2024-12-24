@@ -2,6 +2,7 @@ import React from 'react';
 import ServiceCard from '../cards/ServiceCard';
 import Paragraph from '../common/Paragraph';
 import { services } from '../../serviceData.js';
+import Header from '../common/Header';
 
 export default function ServiceSection() {
   const content =
@@ -10,9 +11,7 @@ export default function ServiceSection() {
   return (
     <section className="" id="services">
       <div className="flex flex-col md:flex-row gap-8 md:gap-[20px] lg:gap-[40px] 2xl:gap-[120px] items-center ">
-        <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md">
-          Services
-        </div>
+        <Header title="Services" />
         <Paragraph className="text-p 2xl:text-2xl 2xl:mt-5" value={content} />
       </div>
 

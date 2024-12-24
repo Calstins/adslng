@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import MainButton from '../common/MainButton';
 import Paragraph from '../common/Paragraph';
 import { GrStatusGood, GrStatusWarning } from 'react-icons/gr';
+import Header from '../common/Header';
 
 interface EmailJSOptions {
   [key: string]: string | undefined;
@@ -69,9 +70,7 @@ function ContactUsSection() {
         <form ref={form} onSubmit={sendEmail}>
           <div className="py-[60px] px-6 md:px-[50px] xl:pr-[500px]">
             <div className="flex flex-col md:flex-row gap-8 md:gap-[40px] 2xl:gap-[120px] items-center">
-              <div className="px-4 py-3 bg-primary inline-block font-medium text-h2 rounded-md 2xl:text-5xl">
-                Contact Us
-              </div>
+              <Header title="Contact Us" />
               <Paragraph
                 className="text-p 2xl:text-2xl 2xl:mt-5"
                 value={content}

@@ -6,6 +6,7 @@ import { Separator } from '../ui/separator';
 import { Input } from '../ui/input';
 import MainButton from '../common/MainButton';
 import Link from 'next/link';
+import Header from '../common/Header';
 
 interface Social {
   icon: React.ReactNode;
@@ -112,9 +113,7 @@ function FooterSection() {
       </div>
       <div className="mt-[66px] flex flex-col md:flex-row gap-8 justify-between">
         <div>
-          <div className="px-2 bg-primary inline-block font-medium text-[20px] rounded-md">
-            Contact Us:
-          </div>
+          <Header title="Contact Us" />
           <a
             href="mailto:origin@adslng.com"
             className="text-white mt-[27px] block"
